@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Silva | Advocacia Especializada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Dra. Silva <span>Advocacia</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#atuacao">Áreas de Atuação</a></li>
+                    <li><a href="#contato" class="btn-gold">Fale Conosco</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Justiça com <span class="text-gold">Excelência</span> e Integridade.</h1>
+            <p>Defesa jurídica estratégica para proteger seus direitos, seu patrimônio e sua liberdade.</p>
+            <a href="#atuacao" class="btn-main">Conheça Nossos Serviços</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Sobre o Escritório</h2>
+            <div class="about-content">
+                <p>Com uma trajetória pautada na ética e na transparência, nosso escritório oferece atendimento jurídico personalizado. Entendemos que por trás de cada processo existe uma história de vida.</p>
+                <br>
+                <p>Nossa missão é descomplicar o direito e lutar incansavelmente pelos interesses de nossos clientes, combinando conhecimento técnico atualizado com uma abordagem humana.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="atuacao" class="bg-gray">
+        <div class="container">
+            <h2 class="section-title">Áreas de Atuação</h2>
+            <div class="services-grid">
+                
+                <div class="card">
+                    <h3>Família e Sucessões</h3>
+                    <ul class="service-list">
+                        <li>Divórcio Consensual e Litigioso</li>
+                        <li>Guarda e Regulamentação de Visitas</li>
+                        <li>Pensão Alimentícia (Fixação/Revisão)</li>
+                        <li>Inventários e Partilha de Bens</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Direito do Consumidor</h3>
+                    <ul class="service-list">
+                        <li>Negativação Indevida (Limpa Nome)</li>
+                        <li>Atraso/Cancelamento de Voos</li>
+                        <li>Planos de Saúde (Negativas)</li>
+                        <li>Juros Abusivos e Contratos</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Direito Trabalhista</h3>
+                    <ul class="service-list">
+                        <li>Reclamações Trabalhistas</li>
+                        <li>Reconhecimento de Vínculo</li>
+                        <li>Acidente de Trabalho</li>
+                        <li>Rescisão Indireta</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Direito Criminal</h3>
+                    <ul class="service-list">
+                        <li>Acompanhamento em Delegacia</li>
+                        <li>Defesa em Processo Penal</li>
+                        <li>Audiências de Custódia</li>
+                        <li>Habeas Corpus</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="bg-dark">
+        <div class="container">
+            <h2 class="section-title text-white">Entre em Contato</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <input type="tel" placeholder="Telefone / WhatsApp">
+                <textarea placeholder="Descreva brevemente seu caso..." rows="5"></textarea>
+                <button type="submit" class="btn-gold-full">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dra. Silva Advocacia. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">OAB/UF 00.000</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Fecha o menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

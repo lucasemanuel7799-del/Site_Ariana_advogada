@@ -1,0 +1,306 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================= */
+:root {
+    --gold: #D4AF37;       /* Dourado Principal */
+    --gold-hover: #b59021; /* Dourado Escuro */
+    --black: #121212;      /* Preto Profundo */
+    --dark-gray: #1F1F1F;  /* Cinza Chumbo (Fundo Contato) */
+    --light-gray: #F4F4F4; /* Cinza Claro (Fundo Atuação) */
+    --white: #FFFFFF;
+    --text-body: #333333;
+    --nav-height: 80px;    /* Altura da barra de navegação */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-body);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita rolagem lateral no mobile */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--black);
+}
+
+a { text-decoration: none; }
+ul { list-style: none; }
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   2. ESTRUTURA DE SEÇÃO (100vh - Tela Cheia)
+   ========================================= */
+section {
+    min-height: 100vh;       /* Altura mínima igual à tela */
+    display: flex;           /* Flexbox para alinhar */
+    flex-direction: column;  /* Coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    position: relative;
+    padding: 60px 0;         /* Respiro interno */
+    scroll-margin-top: var(--nav-height); /* Compensa o menu fixo ao rolar */
+}
+
+.bg-white { background-color: var(--white); }
+.bg-gray { background-color: var(--light-gray); }
+.bg-dark { background-color: var(--black); }
+
+/* =========================================
+   3. HEADER & NAVEGAÇÃO
+   ========================================= */
+header {
+    background-color: var(--black);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--gold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+.logo span { color: var(--gold); }
+
+.nav-links { display: flex; gap: 25px; align-items: center; }
+
+.nav-links a { 
+    color: var(--white); 
+    font-size: 0.9rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+/* Botão Destaque no Menu */
+.btn-gold {
+    border: 1px solid var(--gold);
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: var(--gold) !important;
+}
+
+.btn-gold:hover { background: var(--gold); color: var(--black) !important; }
+
+/* =========================================
+   4. HERO SECTION (HOME)
+   ========================================= */
+.hero {
+    /* Imagem de fundo */
+    background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+    text-align: center;
+    margin-top: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Escurece a foto */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.text-gold { color: var(--gold); }
+
+.btn-main {
+    background: var(--gold);
+    color: var(--black);
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-main:hover { transform: translateY(-3px); background: var(--gold-hover); }
+
+/* =========================================
+   5. CONTEÚDO (SOBRE & ATUAÇÃO)
+   ========================================= */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: ''; display: block; width: 70px; height: 3px;
+    background: var(--gold); margin: 15px auto 0;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Grid de Cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-bottom: 4px solid var(--gold);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.card h3 { margin-bottom: 15px; font-size: 1.4rem; }
+
+/* Lista Personalizada */
+.service-list { list-style: none; margin-top: 15px; }
+.service-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #666;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+.service-list li::before {
+    content: '▪';
+    position: absolute; left: 0; color: var(--gold); font-size: 1.2rem; line-height: 1rem;
+}
+.service-list li:last-child { border-bottom: none; }
+
+/* =========================================
+   6. CONTATO
+   ========================================= */
+.text-white { color: var(--white); }
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex; flex-direction: column; gap: 15px;
+    width: 100%;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #333;
+    background: var(--dark-gray);
+    color: var(--white);
+    outline: none;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+}
+
+input:focus, textarea:focus { border-color: var(--gold); background: #222; }
+
+.btn-gold-full {
+    background: var(--gold);
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-gold-full:hover { background: var(--gold-hover); }
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer {
+    height: auto;
+    padding: 30px;
+    background: #080808;
+    color: #777;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+/* =========================================
+   8. MOBILE (RESPONSIVIDADE)
+   ========================================= */
+.menu-toggle { display: none; cursor: pointer; }
+.bar { display: block; width: 25px; height: 3px; background: var(--gold); margin: 5px auto; }
+
+@media (max-width: 768px) {
+    /* Tipografia Mobile */
+    .hero-content h1 { font-size: 2rem; }
+    .section-title { font-size: 2rem; }
+
+    /* Menu Hamburguer */
+    .menu-toggle { display: block; }
+    
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: var(--nav-height);
+        height: calc(100vh - var(--nav-height));
+        background: var(--black);
+        flex-direction: column;
+        width: 75%;
+        justify-content: center;
+        transition: 0.4s ease;
+        border-left: 2px solid var(--gold);
+    }
+
+    .nav-links.active { right: 0; }
+    .nav-links li { margin: 20px 0; }
+    
+    /* Ajuste de Seções no Mobile */
+    section { padding: 40px 0; }
+    .container { width: 90%; }
+}
