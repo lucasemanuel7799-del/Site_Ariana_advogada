@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AM Advocacia | Dra. Ariana Mendonça</title>
     
     <link rel="stylesheet" href="style.css">
@@ -10,9 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
@@ -29,11 +27,11 @@
             
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Dra. Ariana</a></li>
-                    <li><a href="#atuacao">Atuação</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#" id="btn-login-area" onclick="window.cliqueBotaoAdmin(event)" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
+                    <li><a href="#home" onclick="document.getElementById('menu-toggle').checked = false;">Início</a></li>
+                    <li><a href="#sobre" onclick="document.getElementById('menu-toggle').checked = false;">Dra. Ariana</a></li>
+                    <li><a href="#atuacao" onclick="document.getElementById('menu-toggle').checked = false;">Atuação</a></li>
+                    <li><a href="#blog" onclick="document.getElementById('menu-toggle').checked = false;">Blog</a></li>
+                    <li><a href="#" id="btn-login-area" onclick="window.cliqueBotaoAdmin(event); document.getElementById('menu-toggle').checked = false;" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,7 +53,6 @@
     <section class="section-fullscreen bg-light">
         <div class="container">
             <h2 class="section-title">Nossos Diferenciais</h2>
-            
             <div class="grid-4">
                 <div class="feature-card">
                     <i class="fas fa-certificate icon-gold"></i>
