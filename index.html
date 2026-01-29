@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AM Advocacia | Dra. Ariana Mendonça</title>
-    
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -31,7 +27,7 @@
                     <li><a href="#sobre" onclick="document.getElementById('menu-toggle').checked = false;">Dra. Ariana</a></li>
                     <li><a href="#atuacao" onclick="document.getElementById('menu-toggle').checked = false;">Atuação</a></li>
                     <li><a href="#blog" onclick="document.getElementById('menu-toggle').checked = false;">Blog</a></li>
-                    <li><a href="#" id="btn-login-area" onclick="window.cliqueBotaoAdmin(event); document.getElementById('menu-toggle').checked = false;" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
+                    <li><a href="#" id="btn-login-area" onclick="window.cliqueBotaoAdmin(event)" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
                 </ul>
             </nav>
         </div>
@@ -54,32 +50,13 @@
         <div class="container">
             <h2 class="section-title">Nossos Diferenciais</h2>
             <div class="grid-4">
-                <div class="feature-card">
-                    <i class="fas fa-certificate icon-gold"></i>
-                    <h3>Experiência Comprovada</h3>
-                    <p>Anos de atuação exclusiva em direito de família e previdenciário, com histórico consistente de resultados positivos.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-heart icon-gold"></i>
-                    <h3>Atendimento Humanizado</h3>
-                    <p>Tratamos cada caso com a sensibilidade que merece, compreendendo as particularidades emocionais.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-chart-line icon-gold"></i>
-                    <h3>Foco em Resultados</h3>
-                    <p>Nossa especialização nos permite desenvolver estratégias eficazes e personalizadas para cada situação.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-clock icon-gold"></i>
-                    <h3>Agilidade e Transparência</h3>
-                    <p>Mantemos você informado em todas as etapas do processo, com comunicação clara e respostas rápidas.</p>
-                </div>
+                <div class="feature-card"><i class="fas fa-certificate icon-gold"></i><h3>Experiência Comprovada</h3><p>Anos de atuação exclusiva em direito de família e previdenciário.</p></div>
+                <div class="feature-card"><i class="fas fa-heart icon-gold"></i><h3>Atendimento Humanizado</h3><p>Tratamos cada caso com a sensibilidade que merece.</p></div>
+                <div class="feature-card"><i class="fas fa-chart-line icon-gold"></i><h3>Foco em Resultados</h3><p>Desenvolvemos estratégias eficazes e personalizadas.</p></div>
+                <div class="feature-card"><i class="fas fa-clock icon-gold"></i><h3>Agilidade</h3><p>Comunicação clara e respostas rápidas.</p></div>
             </div>
-
             <div class="diferenciais-footer-text">
-                <p>Na <strong>AM Advocacia e Assessoria Jurídica</strong>, entendemos que questões familiares são delicadas e requerem não apenas expertise jurídica, mas também sensibilidade e compreensão humana. Nossa missão é oferecer suporte legal completo para proteger os direitos e interesses de você e sua família em momentos desafiadores.</p>
-                <br>
-                <p>Com anos de experiência e dedicação ao direito de família e previdenciário, construímos uma trajetória sólida de resultados positivos e clientes satisfeitos. Trabalhamos incansavelmente para garantir que cada caso receba a atenção personalizada que merece, sempre buscando as melhores soluções jurídicas para sua situação específica.</p>
+                <p>Na <strong>AM Advocacia e Assessoria Jurídica</strong>, entendemos que questões familiares são delicadas. Nossa missão é oferecer suporte legal completo para proteger os direitos e interesses de você e sua família.</p>
             </div>
         </div>
     </section>
@@ -93,13 +70,11 @@
             <div class="about-text">
                 <h4>SÓCIA FUNDADORA</h4>
                 <h2>Drª Ariana Mendonça</h2>
-                
                 <div class="scrollable-text">
-                    <p>Com formação sólida e compromisso inabalável com a justiça, a <strong>Dra. Ariana Mendonça</strong> é a força motriz por trás da AM Advocacia e Assessoria Jurídica.</p>
-                    <p>Especialista em <strong>Direito de Família</strong>, <strong>Direito Público</strong> e <strong>Professora Universitária</strong>, construiu sua carreira baseada em valores fundamentais: ética, transparência e excelência no atendimento.</p>
-                    <p>Sua abordagem humanizada transforma processos jurídicos complexos em experiências mais compreensíveis e menos estressantes para as famílias que atende.</p>
+                    <p>Com formação sólida e compromisso inabalável com a justiça, a <strong>Dra. Ariana Mendonça</strong> é a força motriz por trás da AM Advocacia.</p>
+                    <p>Especialista em <strong>Direito de Família</strong>, <strong>Direito Público</strong> e <strong>Professora Universitária</strong>.</p>
+                    <p>Sua abordagem humanizada transforma processos jurídicos complexos em experiências mais compreensíveis.</p>
                 </div>
-
                 <a href="https://wa.me/5500000000000" class="btn-gold small-btn">Falar com a Dra. Ariana</a>
             </div>
         </div>
@@ -112,7 +87,7 @@
                 <div class="service-card"><i class="fas fa-users"></i><h3>Direito de Família</h3><p>Divórcios, guarda, alimentos e inventários.</p></div>
                 <div class="service-card"><i class="fas fa-landmark"></i><h3>Direito Público</h3><p>Defesa frente à administração pública.</p></div>
                 <div class="service-card"><i class="fas fa-balance-scale"></i><h3>Direito Civil</h3><p>Contratos, responsabilidade civil e indenizações.</p></div>
-                <div class="service-card"><i class="fas fa-file-signature"></i><h3>Assessoria</h3><p>Consultoria preventiva para evitar litígios.</p></div>
+                <div class="service-card"><i class="fas fa-file-signature"></i><h3>Assessoria</h3><p>Consultoria preventiva.</p></div>
             </div>
         </div>
     </section>
@@ -142,44 +117,47 @@
         </div>
     </div>
 
-    <div id="login-modal" class="modal hidden">
-        <div class="modal-content">
-            <h3>Área Restrita</h3>
-            <p>Acesso exclusivo Dra. Ariana</p>
-            <input type="email" id="email-login" placeholder="E-mail">
-            <input type="password" id="pass-login" placeholder="Senha">
-            <div class="modal-btns">
-                <button onclick="window.fazerLogin()" class="btn-blue">Entrar</button>
-                <button onclick="window.fecharModal()" class="btn-text">Cancelar</button>
+    <div id="login-modal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <h3 class="modal-title">Área Restrita</h3>
+            <p class="modal-msg">Acesso exclusivo Dra. Ariana</p>
+            <input type="email" id="email-login" placeholder="E-mail" style="margin-bottom:10px;">
+            <input type="password" id="pass-login" placeholder="Senha" style="margin-bottom:15px;">
+            <div class="modal-actions">
+                <button onclick="window.fazerLogin()" class="btn-confirm">Entrar</button>
+                <button onclick="window.fecharModal()" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="custom-alert" class="modal-overlay hidden">
+        <div class="modal-box" id="alert-box">
+            <h3 class="modal-title" id="alert-title">Aviso</h3>
+            <p class="modal-msg" id="alert-msg">Mensagem...</p>
+            <div class="modal-actions">
+                <button onclick="window.fecharAlert()" class="btn-confirm">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="custom-confirm" class="modal-overlay hidden">
+        <div class="modal-box">
+            <h3 class="modal-title" id="confirm-title">Confirmação</h3>
+            <p class="modal-msg" id="confirm-msg">Tem certeza?</p>
+            <div class="modal-actions">
+                <button id="btn-confirm-yes" class="btn-confirm">Sim, confirmar</button>
+                <button onclick="window.fecharConfirm()" class="btn-cancel">Cancelar</button>
             </div>
         </div>
     </div>
 
     <footer>
         <div class="container footer-content">
-            <div class="footer-col">
-                <div class="logo-footer">AM <span>Advocacia</span></div>
-                <p>Soluções jurídicas com ética e compromisso.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <ul class="contact-list">
-                    <li><i class="fab fa-whatsapp"></i> (00) 99999-9999</li>
-                    <li><i class="fas fa-envelope"></i> contato@amadvocacia.com</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Redes Sociais</h4>
-                <div class="social-links">
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+            <div class="footer-col"><div class="logo-footer">AM <span>Advocacia</span></div></div>
+            <div class="footer-col"><h4>Contato</h4><ul class="contact-list"><li><i class="fab fa-whatsapp"></i> (00) 99999-9999</li></ul></div>
+            <div class="footer-col"><h4>Redes Sociais</h4><div class="social-links"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></div></div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 AM Advocacia - Dra. Ariana Mendonça.</p>
-        </div>
+        <div class="footer-bottom"><p>&copy; 2024 AM Advocacia - Dra. Ariana Mendonça.</p></div>
     </footer>
 
     <a href="https://wa.me/5500000000000" class="wpp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
