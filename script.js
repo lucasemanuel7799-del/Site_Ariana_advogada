@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// ==========================================
+// FUNÇÕES VISUAIS
+// ==========================================
 window.atualizarPrevia = function() {
     var title = document.getElementById('post-title').value || "Título do Artigo";
     var content = document.getElementById('post-content').value || "O conteúdo do seu artigo aparecerá aqui...";
@@ -75,17 +78,30 @@ window.gerarHTMLCard = function(title, content, imgUrl, id, isPreview) {
     `;
 }
 
+// ==========================================
+// FUNÇÕES ADMIN (CORRIGIDO PARA MOBILE)
+// ==========================================
+
 window.cliqueBotaoAdmin = async function(e) {
     e.preventDefault();
+    
+    // 1. FECHA O MENU MOBILE (CRUCIAL PARA O IPHONE)
+    var menuToggle = document.getElementById('menu-toggle');
+    if(menuToggle) menuToggle.checked = false;
+
     if (!_supabase) return;
     const { data: { session } } = await _supabase.auth.getSession();
+    
     if (session) {
         if(confirm("Dra., deseja sair?")) window.fazerLogout();
     } else {
+        // 2. ABRE O MODAL
         loginModal.classList.remove('hidden');
     }
 }
+
 window.fecharModal = function() { loginModal.classList.add('hidden'); }
+
 window.fazerLogin = async function() {
     var email = document.getElementById('email-login').value;
     var pass = document.getElementById('pass-login').value;
@@ -94,12 +110,14 @@ window.fazerLogin = async function() {
     if (error) alert("Erro: " + error.message);
     else { window.fecharModal(); window.checarSessao(); alert("Bem-vinda, Dra.!"); }
 }
+
 window.fazerLogout = async function() {
     await _supabase.auth.signOut();
     window.checarSessao();
     alert("Saiu do sistema.");
 }
 
+// === UPLOAD E PUBLICAÇÃO ===
 window.publicarPost = async function() {
     var title = document.getElementById('post-title').value;
     var content = document.getElementById('post-content').value;
@@ -141,6 +159,7 @@ window.publicarPost = async function() {
     }
 }
 
+// === CARREGAMENTO ===
 if (!window.scriptIniciado) {
     document.addEventListener('DOMContentLoaded', () => {
         window.carregarPosts();
