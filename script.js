@@ -92,7 +92,7 @@ window.enviarFormulario = function() {
         return window.showAlert("Atenção", "Por favor, preencha todos os campos.", "error");
     }
 
-    var numeroAdvogada = "5500000000000"; 
+    var numeroAdvogada = "5588996074394"; 
     var textoMensagem = `Olá, vim pelo site da AM Advocacia.%0A%0A*Nome:* ${nome}%0A*WhatsApp:* ${whatsappCliente}%0A*Caso:* ${resumo}`;
     var linkWhatsApp = `https://wa.me/${numeroAdvogada}?text=${textoMensagem}`;
 
