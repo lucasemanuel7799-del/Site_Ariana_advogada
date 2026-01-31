@@ -58,7 +58,7 @@ ul { list-style: none; }
 .text-white { color: var(--white); }
 
 /* =========================================
-   3. HEADER & MENU
+   3. HEADER & MENU (MODIFICADO PARA ESPAÇAMENTO MÁXIMO)
    ========================================= */
 header {
     background: var(--black); 
@@ -71,7 +71,15 @@ header {
     border-bottom: 1px solid #222;
 }
 
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
+/* NOVO: Nav Container ocupa 95% da tela para empurrar itens para as bordas */
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 95%; /* Maior largura */
+    max-width: 100%; /* Sem limite de container */
+    margin: 0 auto;
+}
 
 /* LOGO DE IMAGEM */
 .header-logo { max-height: 50px; width: auto; object-fit: contain; }
@@ -351,10 +359,10 @@ footer { background: var(--black); color: #ccc; padding: 60px 0 20px; border-top
 .footer-bottom p { margin: 5px 0; }
 .oab-text { color: var(--gold); font-weight: bold; margin-top: 10px; font-size: 0.95rem; letter-spacing: 1px; opacity: 1; }
 
-/* Created by Lucas (Link Estilizado) */
+/* Created by Lucas (Fonte Babra/Cinzel + Link) */
 .creator-text { margin-top: 10px; }
 .creator-text a {
-    font-family: 'Babra', 'Cinzel', serif; /* Tenta usar Babra, se não tiver, usa Cinzel */
+    font-family: 'Babra', 'Cinzel', serif; /* Babra se disponível, senão Cinzel */
     color: var(--white);
     text-decoration: none !important;
     font-size: 0.85rem;
@@ -384,6 +392,7 @@ footer { background: var(--black); color: #ccc; padding: 60px 0 20px; border-top
 
 @media (max-width: 768px) {
     .menu-icon { display: block; }
+    /* Nav Mobile (Corrigido para Largura) */
     .nav-menu { position: fixed; top: 0; right: -100% !important; width: 80%; height: 100vh; background: var(--black); flex-direction: column; padding-top: 80px; transition: 0.4s ease-in-out; box-shadow: -5px 0 15px rgba(0,0,0,0.5); z-index: 1050; }
     .nav-menu ul { flex-direction: column; align-items: center; gap: 30px; }
     #menu-toggle:checked ~ .nav-menu { right: 0 !important; }
