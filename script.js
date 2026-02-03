@@ -104,7 +104,7 @@ window.enviarFormulario = function() {
 }
 
 // ==========================================
-// 4. ADMIN & LOGIN
+// 4. ADMIN & LOGIN & CADASTRO
 // ==========================================
 window.cliqueBotaoAdmin = async function(e) {
     e.preventDefault();
@@ -129,6 +129,27 @@ window.fazerLogin = async function() {
     if (error) window.showAlert("Erro", error.message, "error");
     else { window.fecharModal(); window.checarSessao(); window.showAlert("Sucesso", "Bem-vinda!", "success"); }
 }
+
+// NOVA FUNÇÃO: CRIAR CONTA
+window.criarConta = async function() {
+    var email = document.getElementById('email-login').value;
+    var pass = document.getElementById('pass-login').value;
+    
+    if(!email || !pass) return window.showAlert("Erro", "Preencha e-mail e senha para cadastrar.", "error");
+    
+    const { data, error } = await _supabase.auth.signUp({
+        email: email,
+        password: pass,
+    });
+
+    if (error) {
+        window.showAlert("Erro no Cadastro", error.message, "error");
+    } else {
+        window.showAlert("Sucesso", "Cadastro realizado! Verifique seu e-mail para confirmar antes de entrar.", "success");
+        window.fecharModal();
+    }
+}
+
 window.fazerLogout = async function() { await _supabase.auth.signOut(); window.checarSessao(); window.showAlert("Logout", "Saiu.", "success"); }
 
 // ==========================================
@@ -189,7 +210,6 @@ window.atualizarPrevia = function() {
     if (fileInput.files && fileInput.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) { 
-            // Limpa estilo de placeholder
             previewContainer.style.border = "none";
             previewContainer.style.background = "transparent";
             previewContainer.innerHTML = window.gerarHTMLCard(title, content, e.target.result, null, true); 

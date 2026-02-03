@@ -14,7 +14,8 @@
 <body>
 
     <header>
-        <div class="nav-container"> <div class="logo-img-wrapper">
+        <div class="container nav-container">
+            <div class="logo-img-wrapper">
                 <a href="#home">
                     <img src="images/logo_header.png" alt="AM Advocacia" class="header-logo">
                 </a>
@@ -28,6 +29,7 @@
             
             <nav class="nav-menu">
                 <ul>
+                    <li><a href="#home" onclick="document.getElementById('menu-toggle').checked = false;">Início</a></li>
                     <li><a href="#institucional" onclick="document.getElementById('menu-toggle').checked = false;">Institucional</a></li>
                     <li><a href="#escritorio" onclick="document.getElementById('menu-toggle').checked = false;">Escritório</a></li>
                     <li><a href="#atuacao" onclick="document.getElementById('menu-toggle').checked = false;">Área de Atuação</a></li>
@@ -178,9 +180,18 @@
     <div id="login-modal" class="modal-overlay hidden">
         <div class="modal-box">
             <h3 class="modal-title">Área Restrita</h3>
+            <p style="font-size:0.85rem; color:#666; margin-bottom:15px;">Acesso exclusivo Dra. Ariana</p>
+            
             <input type="email" id="email-login" placeholder="E-mail" style="margin-bottom:10px;">
             <input type="password" id="pass-login" placeholder="Senha" style="margin-bottom:15px;">
-            <div class="modal-actions"><button onclick="window.fazerLogin()" class="btn-confirm">Entrar</button><button onclick="window.fecharModal()" class="btn-cancel">Cancelar</button></div>
+            
+            <div class="modal-actions" style="display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; gap:10px;">
+                    <button onclick="window.fazerLogin()" class="btn-confirm" style="flex:1;">Entrar</button>
+                    <button onclick="window.criarConta()" class="btn-confirm" style="flex:1; background:transparent; color:#000; border:1px solid #000;">Cadastrar</button>
+                </div>
+                <button onclick="window.fecharModal()" class="btn-cancel">Cancelar</button>
+            </div>
         </div>
     </div>
 
